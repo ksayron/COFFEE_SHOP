@@ -1,0 +1,19 @@
+{
+  "name": "kvarta", "private": true, "version": "1.0.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": {"node": ">=22.12.0"},
+  "scripts": {
+    "dev:web": "npm run dev -w @kvarta/web",
+    "dev:api": "npm run dev -w @kvarta/api",
+    "typecheck": "tsc --noEmit -p packages/shared && tsc --noEmit -p apps/web && tsc --noEmit -p apps/api",
+    "build": "npm run build -w @kvarta/web && npm run build -w @kvarta/api",
+    "test": "tsx --test packages/shared/*.test.ts",
+    "test:integration": "tsx --test tests/integration.test.ts",
+    "test:browser": "playwright test",
+    "migrate": "node apps/api/scripts/migrate.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2", "@types/node": "22.19.15", "tsx": "4.21.0",
+    "typescript": "5.9.3", "sharp": "0.34.5", "lighthouse": "13.0.3"
+  }
+}
