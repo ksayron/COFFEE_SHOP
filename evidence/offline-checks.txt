@@ -1,0 +1,33 @@
+Kvarta local evidence record
+
+18 October 2026, executed in this Codex session:
+- TypeScript parser: 15 sources; relative imports and JSON valid.
+- JavaScript node --check, PowerShell parser and PostCSS parsing passed.
+- docker compose config --quiet passed with a configuration-only password.
+- Cached nginx:1.27-alpine, --pull=never, --network none: nginx -t passed.
+  Intended deployment nginx:1.28-alpine was not built/tested.
+- Cached postgres:17-alpine, disposable --network none container:
+  migration applied; 16 concurrent transactions using the per-phone advisory lock
+  and rolling-window insert produced one row; expiry admitted a second row.
+  Container removed. Direct SQL verification, not pg client/Next API verification.
+- Static representative React server-rendered previews inspected at responsive
+  overrides 390x844 and 1440x900. Notice treatment selected.
+
+19 October 2026, final refresh:
+- TypeScript parsing/local imports/JSON passed again (15 sources).
+- JavaScript and PowerShell syntax passed again.
+- PostCSS parsing passed (147 top-level nodes).
+- Compose configuration passed again; no stack build/start.
+- Preview screenshots refreshed and actual DOM dimensions recorded separately.
+  PNG dimensions and SHA-256 are in assets.json.
+- Container rerun stopped at first command: Docker Desktop Linux engine pipe absent.
+  No PostgreSQL/Nginx rerun result is claimed for this date.
+
+Not executed:
+npm install/ci completion; lockfile generation; npm test; full tsc; production
+builds; application Compose startup; actual HTTP/pg integration; real Radix/form
+browser tests; persistence through app container recreation; public deployment;
+public database record; mobile Lighthouse. No performance score is claimed.
+
+Dependencies and Docker image downloads were left to the human on request.
+Only existing local tooling/cached images were used for the offline checks above.
