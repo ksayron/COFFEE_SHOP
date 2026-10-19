@@ -1,0 +1,386 @@
+.page {
+  --blue: #2244c8;
+  --butter: #f4d977;
+  background: var(--butter);
+  color: var(--blue);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 25px 48px;
+}
+
+.brand {
+  font-family: 'Unbounded Demo',sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -.04em;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.brand span {
+  display: block;
+  font-family: 'Golos Demo',sans-serif;
+  font-size: 11px;
+  font-weight: 450;
+  letter-spacing: .02em;
+  margin-top: 5px;
+}
+
+.header p {
+  font-size: 12px;
+}
+
+.header > a:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  font-size: 13px;
+}
+
+.poster {
+  margin: 0 24px;
+  border: 2px solid var(--blue);
+  padding: 20px 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.posterTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 11px;
+  padding-bottom: 32px;
+}
+
+.poster h1 {
+  font-family: 'Unbounded Demo',sans-serif;
+  font-size: clamp(39px,7.2vw,108px);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.poster h1 > span {
+  font-size: .72em;
+}
+
+.posterBody {
+  position: relative;
+  min-height: 370px;
+  display: grid;
+  grid-template-columns: .9fr 1.4fr;
+}
+
+.promise {
+  padding: 28px 0 38px;
+}
+
+.promise p {
+  font-size: 24px;
+  letter-spacing: -.035em;
+  line-height: 1.3;
+  font-weight: 550;
+}
+
+.promise > span {
+  display: block;
+  font-size: 12px;
+  margin: 18px 0 24px;
+}
+
+.promise a {
+  display: inline-flex;
+  gap: 36px;
+  align-items: center;
+  text-decoration: none;
+  background: var(--blue);
+  color: var(--butter) !important;
+  padding: 15px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.illustration {
+  width: min(100%,620px) !important;
+  height: auto !important;
+  align-self: end;
+  margin-top: -50px;
+  transform: rotate(-5deg);
+}
+
+.smallNote {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  font-size: 13px;
+  line-height: 1.3;
+  transform: rotate(8deg);
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 48px 72px 40px;
+  align-items: start;
+}
+
+.product {
+  background: #fff5d2;
+  color: #252424;
+  padding: 30px;
+  transform: rotate(-2deg);
+  border: 2px solid var(--blue);
+}
+
+.product > span,.subscription > span {
+  font-size: 11px;
+}
+
+.product h2 {
+  font-family: 'Unbounded Demo',sans-serif;
+  font-size: clamp(23px,2.3vw,34px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+  margin: 18px 0;
+  max-width: 15ch;
+}
+
+.product p {
+  font-size: 13px;
+}
+
+.product > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  gap: 20px;
+}
+
+.product strong,.subscription strong {
+  font-size: 42px;
+  letter-spacing: -.06em;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.product small,.subscription small {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.product a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  font-size: 13px;
+}
+
+.subscription {
+  padding: 25px 0;
+}
+
+.subscription h2 {
+  font-family: 'Unbounded Demo',sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -.045em;
+  margin: 20px 0;
+}
+
+.subscription p {
+  font-size: 13px;
+}
+
+.subscription > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 14px;
+  text-decoration: none;
+}
+
+.signoff {
+  margin: 12px 48px 0;
+  border-top: 2px solid var(--blue);
+  padding: 26px 0 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.signoff > span {
+  font-family: 'Unbounded Demo',sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.06em;
+}
+
+.signoff p {
+  font-size: 13px;
+}
+
+.signoff b {
+  font-family: 'Unbounded Demo',sans-serif;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: -.1em;
+  transform: rotate(-10deg);
+}
+
+@media (min-width: 1600px) {
+  .page {
+    max-width: 1600px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .poster h1 {
+    font-size: 7.6vw;
+  }
+  .posterBody {
+    min-height: 320px;
+    grid-template-columns: 1fr 1.2fr;
+  }
+  .promise p {
+    font-size: 21px;
+  }
+  .smallNote {
+    display: none;
+  }
+  .illustration {
+    margin-top: 0;
+  }
+  .offers {
+    padding-inline: 40px;
+    gap: 35px;
+  }
+  .subscription h2 {
+    font-size: 23px;
+  }
+  .signoff {
+    margin-inline: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+    gap: 12px;
+  }
+  .header p {
+    display: none;
+  }
+  .brand {
+    font-size: 23px;
+  }
+  .header > a:last-child {
+    font-size: 11px;
+    gap: 8px;
+  }
+  .header svg {
+    width: 16px;
+  }
+  .poster {
+    margin-inline: 12px;
+    padding: 14px 16px 0;
+  }
+  .posterTop {
+    font-size: 9px;
+    gap: 20px;
+    padding-bottom: 24px;
+  }
+  .posterTop span:last-child {
+    max-width: 75px;
+    text-align: right;
+  }
+  .poster h1 {
+    font-size: 10vw;
+    line-height: 1.2;
+  }
+  .poster h1 > span {
+    font-size: .77em;
+    display: inline-block;
+  }
+  .posterBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .promise {
+    padding: 24px 0 0;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px 10px;
+  }
+  .promise p {
+    font-size: 17px;
+  }
+  .promise > span {
+    margin: 0;
+    font-size: 10px;
+    align-self: center;
+  }
+  .promise a {
+    grid-column: 1/-1;
+    width: fit-content;
+    font-size: 13px;
+    padding: 13px 22px;
+  }
+  .illustration {
+    width: 100% !important;
+    margin-top: 6px;
+    margin-bottom: -7px;
+    transform: rotate(-5deg);
+  }
+  .offers {
+    grid-template-columns: 1fr;
+    padding: 34px 25px 20px;
+    gap: 16px;
+  }
+  .product {
+    padding: 24px;
+  }
+  .product h2 {
+    font-size: 26px;
+  }
+  .subscription {
+    padding: 20px 0;
+  }
+  .subscription h2 {
+    font-size: 26px;
+  }
+  .signoff {
+    margin: 10px 20px 0;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .signoff > span {
+    font-size: 17px;
+  }
+  .signoff p {
+    font-size: 12px;
+  }
+  .signoff b {
+    display: none;
+  }
+}

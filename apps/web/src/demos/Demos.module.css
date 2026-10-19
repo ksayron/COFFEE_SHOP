@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'Golos Demo';
+  src: url('/fonts/golos.woff2') format('woff2');
+  font-weight: 400 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unbounded Demo';
+  src: url('/fonts/demos/unbounded.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kvarta Label Demo';
+  src: url('/fonts/demos/kvarta-label.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:global(body) {
+  margin: 0;
+}
+
+.root {
+  font: 400 16px/1.5 'Golos Demo', sans-serif;
+  color: #292522;
+  background: #f6f5f1;
+  font-synthesis: none;
+}
+
+.root *, .root *::before, .root *::after {
+  box-sizing: border-box;
+}
+
+.root :where(h1,h2,h3,p,figure,dl,dd) {
+  margin: 0;
+}
+
+.root :where(a) {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  touch-action: manipulation;
+}
+
+.root :where(a:focus-visible,button:focus-visible) {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+
+.root :where(img) {
+  display: block;
+  max-width: 100%;
+}
+
+.root :where(svg) {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.root :where(a) {
+  transition: opacity 140ms ease;
+}
+
+.root :where(a:hover) {
+  opacity: .78;
+}
+
+.skipLink {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 10;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  top: 10px;
+}
+
+.reviewNav {
+  min-height: 52px;
+  padding: 0 28px;
+  background: #292a29;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+}
+
+.reviewNav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 6px;
+}
+
+.reviewHome {
+  font-weight: 650;
+}
+
+.reviewHome span {
+  color: #c3c5c0;
+  font-weight: 400;
+}
+
+.reviewOptions {
+  display: flex;
+  gap: 24px;
+}
+
+.reviewOptions a {
+  border-bottom: 2px solid transparent;
+}
+
+.reviewOptions a[aria-current] {
+  border-color: #fff;
+}
+
+.originalLink {
+  min-width: 44px;
+  justify-content: center;
+}
+
+.originalLink svg {
+  width: 14px;
+}
+
+.reviewFooter {
+  padding: 40px max(28px,calc((100% - 1320px)/2));
+  background: #e8e7e0;
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reviewFooter > div {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  line-height: 1.8;
+}
+
+.reviewFooter p {
+  margin-top: 10px;
+  max-width: 62ch;
+}
+
+.reviewFooter small {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #595a54;
+}
+
+.reviewFooter > a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 44px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.gallery {
+  max-width: 1440px;
+  margin: auto;
+  padding: 70px 48px 72px;
+  min-height: calc(100dvh - 52px);
+}
+
+.galleryIntro {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px 60px;
+  align-items: end;
+  margin-bottom: 50px;
+}
+
+.galleryIntro > span {
+  grid-column: 1/-1;
+}
+
+.galleryIntro h1 {
+  font-size: clamp(42px,5.5vw,76px);
+  line-height: 1.03;
+  letter-spacing: -.055em;
+  font-weight: 550;
+}
+
+.galleryIntro p {
+  max-width: 430px;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 30px;
+}
+
+.thumbnail {
+  display: block;
+  position: relative;
+  background: #dfdfd5;
+  aspect-ratio: 1.6;
+  overflow: hidden;
+  margin-bottom: 22px;
+  border: 1px solid #dad9d1;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.thumbnail > span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 10px 13px;
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+}
+
+.conceptCard h2 {
+  font-size: 23px;
+  font-weight: 550;
+  letter-spacing: -.035em;
+  margin: 10px 0;
+}
+
+.conceptCard h2 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+.conceptCard > p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #575750;
+}
+
+.galleryNote {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #c8c8bf;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px 50px;
+}
+
+.galleryNote h2 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -.03em;
+}
+
+.galleryNote p {
+  max-width: 650px;
+  font-size: 14px;
+}
+
+.galleryNote a {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 44px;
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+  .reviewOptions {
+    gap: 20px;
+  }
+  .reviewOptions span {
+    display: none;
+  }
+  .reviewFooter {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery {
+    padding: 44px 24px;
+  }
+  .galleryGrid {
+    gap: 20px;
+  }
+  .conceptCard h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviewNav {
+    padding: 0 16px;
+    gap: 12px;
+  }
+  .reviewHome span {
+    display: none;
+  }
+  .originalLink {
+    font-size: 0;
+  }
+  .originalLink svg {
+    width: 20px;
+  }
+  .reviewOptions {
+    gap: 12px;
+  }
+  .reviewOptions a {
+    min-width: 44px;
+    justify-content: center;
+  }
+  .reviewFooter {
+    padding: 30px 20px;
+  }
+  .reviewFooter > a {
+    flex-shrink: 1;
+  }
+  .galleryIntro {
+    display: block;
+    margin-bottom: 36px;
+  }
+  .galleryIntro h1 {
+    margin: 20px 0;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .galleryIntro p {
+    font-size: 15px;
+  }
+  .galleryNote {
+    display: block;
+    margin-top: 40px;
+  }
+  .galleryNote p {
+    margin: 15px 0;
+  }
+  .gallery {
+    padding-inline: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root :where(a) {
+    transition: none;
+  }
+}
