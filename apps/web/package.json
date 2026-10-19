@@ -1,0 +1,6 @@
+{
+  "name":"@kvarta/web","version":"1.0.0","private":true,"type":"module",
+  "scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0"},
+  "dependencies":{"@kvarta/shared":"*","@radix-ui/react-radio-group":"1.3.8","@radix-ui/react-icons":"1.3.2","react":"19.3.1","react-dom":"19.3.1"},
+  "devDependencies":{"@types/react":"19.2.14","@types/react-dom":"19.2.3","@vitejs/plugin-react":"5.1.4","vite":"7.3.1"}
+}

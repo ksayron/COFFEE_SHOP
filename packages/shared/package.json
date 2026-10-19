@@ -1,0 +1,4 @@
+{
+  "name": "@kvarta/shared", "version": "1.0.0", "private": true, "type": "module",
+  "exports": "./index.ts", "dependencies": {"libphonenumber-js": "1.12.38", "zod": "4.3.6"}
+}

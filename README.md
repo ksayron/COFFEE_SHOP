@@ -1,12 +1,57 @@
 # Кварта
 
-Fictional Minsk roastery landing for a Junior+ job assignment. Implementation is
-in progress; no live deployment or completed checks are claimed yet.
+Лендинг вымышленной минской обжарки: ассортимент, подписка и заявка без оплаты.
+React + TypeScript + Radix → Nginx → Next.js API → PostgreSQL; три сервиса в одном
+Compose. Направление — небольшая соседская мастерская, референсы Florets + Jolene.
 
-Approved direction: neighbourhood workshop, Florets + Jolene. Zerno is an interior
-reference only. React SPA + Radix, Nginx, Next.js API and PostgreSQL;
-one local Compose. Approved public demo: Vercel + Neon.
+**Статус:** исходники подготовлены; установка зависимостей передана человеку.
+Lockfile пока отсутствует. Полная сборка, запуск стека и отправка через настоящую
+форму ещё не проверены. Публичное размещение и Lighthouse отложены по просьбе
+автора. Репозиторий пока не является готовой отправкой работодателю.
 
-See [workflow](github.md), [brief](docs/brief.md), [roadmap](docs/roadmap.md),
-[AI process](docs/ai-log.md), and [verification](docs/verification.md).
-This provisional README will be replaced with executed results and run instructions.
+## Запуск после скачивания зависимостей
+
+Node.js 22, npm 10+, Docker Desktop с Linux containers. Из корня в PowerShell:
+
+```powershell
+./scripts/start-local.ps1
+# После успешного запуска: http://localhost:8080
+npm run test:integration
+npx playwright install chromium
+npm run test:browser
+./scripts/verify-persistence.ps1
+```
+
+Первый скрипт выполняет `npm install` (затем используется `npm ci`), создаёт
+локальный `.env` со случайным паролем, запускает тесты/сборку и Compose.
+Созданный `package-lock.json` нужно проверить и закоммитить. Подробности и SQL
+для просмотра заявок — в [инструкции запуска](docs/deployment.md).
+
+## Решения и честные ограничения
+
+Человек предоставил задание, выбрал архитектуру, утвердил референсы и управлял
+границами работы. ИИ написал код, документацию, тестовые сценарии, создал две
+оригинальные иллюстрации и сравнил две композиции в браузере. Выбрана композиция
+с текстом перед фотографией: на телефоне действие видно раньше. Неизменённые
+факты задания и происхождение изображений записаны в [брифе](docs/brief.md) и
+[источниках](docs/assets.md). Настоящие портреты, отзывы, телефон и email не выдуманы.
+
+PostgreSQL выбран ради постоянного хранения и транзакционной защиты от дублей
+между несколькими API-процессами. Нормализованный телефон блокируется на время
+транзакции; повтор за десять минут подтверждает первую заявку, не меняя её.
+Атрибуция первого захода сохраняется в текущей вкладке. При ошибке форма сохраняет
+введённое и предлагает повторить. Стоимость доставки ниже 50 BYN уточняет менеджер.
+
+В ходе работы ИИ обнаружил и исправил потерю наследуемых security headers в Nginx,
+падение сервера превью на отсутствующем файле и ошибку повторного подмножества
+шрифта. Это реальные наблюдения, описанные в [журнале](docs/ai-log.md); видимые
+сообщения сессии сохранены в [экспорте](evidence/ai-session.md).
+
+Выполнены офлайн-проверки синтаксиса/конфигурации и SQL на отдельном PostgreSQL 17:
+16 параллельных запросов дали одну запись, истечение окна разрешило следующую.
+Две статические композиции просмотрены на 390 и 1440 px. Это не проверка полного
+приложения. [Матрица проверки](docs/verification.md) разделяет выполненное и
+ожидающее установки. Дальше: реальные API/браузерные тесты, сохранность данных,
+публичный Vercel + Neon и мобильный Lighthouse. Telegram оставлен за рамками.
+
+[Фазы и задачи](docs/roadmap.md) · [GitHub-процесс](github.md) · [Передача](docs/handoff.md)

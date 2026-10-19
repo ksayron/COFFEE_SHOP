@@ -1,0 +1,80 @@
+import { test, expect } from '@playwright/test';
+import { execFileSync } from 'node:child_process';
+const sql = (query: string) => execFileSync('docker', ['compose', 'exec', '-T', 'db', 'psql', '-U', 'kvarta', '-d', 'kvarta', '-t', '-A', '-c', query], { encoding: 'utf8' }).trim();
+const cleanup = () => sql("DELETE FROM leads WHERE name='__BROWSER_TEST__'");
+test.beforeEach(() => cleanup());
+test.afterEach(() => cleanup());
+for (const width of [390, 768, 1440])
+  test(`readable layout at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    for (const name of ['Эфиопия Иргачеффе', 'Колумбия Уила', 'Бразилия Серрадо', 'Дрип-пакеты, ассорти'])
+      await expect(page.getByRole('heading', { name })).toBeVisible();
+    await page.screenshot({ path: `evidence/screenshots/landing-${width}.png`, fullPage: true });
+  });
+test('product action selects interest and selected coffee', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Заказать: Колумбия Уила', exact: true }).click();
+  await expect(page.getByRole('radio', { name: 'Разовый заказ', exact: true })).toBeChecked();
+  await expect(page.getByText('В заявке: Колумбия Уила')).toBeVisible();
+  await page.getByRole('button', { name: 'Убрать выбранный кофе' }).click();
+  await expect(page.getByText('В заявке: Колумбия Уила')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Хочу подписку' }).click();
+  await expect(page.getByRole('radio', { name: 'Подписка', exact: true })).toBeChecked();
+});
+test('inline validation, pending guard and real committed success', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('#application').scrollIntoViewIfNeeded();
+  await page.getByLabel('Ваше имя').fill('__BROWSER_TEST__');
+  await page.getByLabel('Телефон', { exact: false }).fill('+79991234567');
+  await page.getByRole('button', { name: 'Оставить заявку', exact: true }).click();
+  await expect(page.locator('#phone-error')).toContainText('белорусский');
+  await page.getByLabel('Телефон', { exact: false }).fill('+375 29 111-12-10');
+  let requests = 0;
+  await page.route('**/api/lead', async (route) => { requests++; await new Promise(r => setTimeout(r, 600)); await route.continue(); });
+  await page.getByRole('button', { name: 'Оставить заявку', exact: true }).dblclick();
+  await expect(page.getByRole('button', { name: 'Отправляем…' })).toBeDisabled();
+  await expect(page.getByRole('heading', { name: 'Спасибо, заявка у нас.' })).toBeVisible();
+  expect(requests).toBe(1);
+  expect(sql("SELECT count(*) FROM leads WHERE phone='+375291111210' AND name='__BROWSER_TEST__'")).toBe('1');
+});
+test('lost response retains values; reload preserves attribution; retry is deduplicated', async ({ page }) => {
+  await page.goto('/?utm_source=instagram&utm_campaign=thursday&utm_content=ad-17&yclid=click17');
+  await page.reload();
+  await page.evaluate(() => history.replaceState({}, '', '/?utm_source=changed#application'));
+  await page.getByLabel('Ваше имя').fill('__BROWSER_TEST__');
+  await page.getByLabel('Телефон', { exact: false }).fill('+375291111211');
+  await page.getByLabel('Комментарий').fill('Тест потери ответа');
+  await page.route('**/api/lead', async (route) => { await route.fetch(); await route.abort('failed'); }, { times: 1 });
+  await page.getByRole('button', { name: 'Оставить заявку', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('Связь прервалась');
+  await expect(page.getByLabel('Ваше имя')).toHaveValue('__BROWSER_TEST__');
+  await expect(page.getByLabel('Комментарий')).toHaveValue('Тест потери ответа');
+  await page.getByRole('button', { name: 'Попробовать ещё раз' }).click();
+  await expect(page.getByRole('heading', { name: 'Заявка уже у нас.' })).toBeVisible();
+  const row = JSON.parse(sql("SELECT json_build_object('n',count(*),'source',max(attribution->>'utm_source'),'ad',max(attribution->>'utm_content'),'click',max(attribution->>'yclid'),'landing',max(attribution->>'landingUrl'),'submission',max(attribution->>'submissionUrl')) FROM leads WHERE phone='+375291111211'"));
+  expect(row.n).toBe(1);
+  expect(row.source).toBe('instagram');
+  expect(row.ad).toBe('ad-17');
+  expect(row.click).toBe('click17');
+  expect(row.landing).toContain('thursday');
+  expect(row.submission).toContain('changed');
+});
+test('storage failure is recoverable and reduced-motion/keyboard work', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'К содержимому' })).toBeFocused();
+  expect(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
+  await page.getByLabel('Ваше имя').fill('__BROWSER_TEST__');
+  await page.getByLabel('Телефон', { exact: false }).fill('+375291111212');
+  await page.route('**/api/lead', route => route.fulfill({ status: 503, contentType: 'application/json', body: JSON.stringify({ message: 'Не удалось сохранить заявку. Попробуйте ещё раз через минуту.' }) }), { times: 1 });
+  await page.getByRole('button', { name: 'Оставить заявку', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('через минуту');
+  await expect(page.getByLabel('Телефон', { exact: false })).toHaveValue('+375291111212');
+  await page.getByRole('button', { name: 'Попробовать ещё раз' }).click();
+  await expect(page.getByRole('heading', { name: 'Спасибо, заявка у нас.' })).toBeVisible();
+});

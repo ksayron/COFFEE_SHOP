@@ -1,0 +1,6 @@
+{
+  "name":"@kvarta/api","version":"1.0.0","private":true,"type":"module",
+  "scripts":{"dev":"next dev --hostname 0.0.0.0","build":"next build","start":"next start --hostname 0.0.0.0"},
+  "dependencies":{"@kvarta/shared":"*","next":"16.4.2","react":"19.3.1","react-dom":"19.3.1","pg":"8.18.0"},
+  "devDependencies":{"@types/pg":"8.16.0"}
+}

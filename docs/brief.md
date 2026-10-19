@@ -42,6 +42,8 @@ Public approved exception: Vercel SPA/API + Neon; rewrites replace Nginx publicl
 Radix supplies behaviour, with custom styling. Shared validation, SQL migrations.
 Per-phone transaction advisory lock, then rolling 10-minute check and insert.
 Canonical +375 phone. 201 new, 200 duplicate, 400 invalid, 503 storage failure.
+During the ten-minute window the first payload wins; duplicates do not overwrite
+the original selection/comment or attribution.
 First UTMs/click IDs/landing/referrer persist per tab; submission URL captured separately.
 
 Design dials: variation 6, motion 2, density 3. Printed light workshop identity;
