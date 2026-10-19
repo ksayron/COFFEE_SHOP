@@ -47,6 +47,13 @@ Do not invent dependency numbers, test results, asset rights or completion evide
 7. Link acceptance evidence before merge/closure. Only then set `status:done`.
 8. Externally blocked acceptance stays open with an honest explanation.
 
+Current handoff exception: the human deferred public deployment and requested
+handling dependency downloads themselves. Keep the dependent implementation as
+incremental phase commits in one draft integration PR while runtime verification
+is unavailable. Do not merge/close those issues or claim a lockfile/build result.
+Automatic CI is temporarily manual-only until the human-generated lockfile is
+committed. Re-enable push/PR checks after the first successful install.
+
 Required checks: types/build; PostgreSQL integration for concurrent rolling-window
 deduplication; browser form states and attribution; 390/768/1440 screenshots;
 Compose persistence; actual public form record; public mobile Lighthouse.

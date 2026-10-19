@@ -11,7 +11,10 @@ Target 4–6 focused implementation hours, excluding research. Deadline 2026-10-
 | M4 | Integration, browser, accessibility and public evidence |
 | M5 | Lighthouse, honest README and submission |
 
-Live issue links follow backlog creation. Acceptance stays open until verified.
+All ten issues exist. M0 is merged; application implementation is retained in a
+draft PR pending the dependency installation handed to the human. M1/M3/M4/M5
+runtime acceptance remains open. Public deployment and public Lighthouse are
+explicitly deferred. Representative M2 previews and provenance were inspected.
 
 ## GitHub backlog
 
