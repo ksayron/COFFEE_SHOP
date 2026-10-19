@@ -2,6 +2,10 @@
 
 Human approved implementation on 18 October 2026. Deadline 19 October, 18:00 +03.
 
+19 October update: the human rejected the baseline visual treatment and approved
+three short local-only homepage demos. Facts/architecture remain the source of
+truth; final visual selection is pending. See [design-demos.md](design-demos.md).
+
 ## Source of truth
 
 Кварта, fictional Minsk workshop. Аня and Дмитрий, former baristas, roast since

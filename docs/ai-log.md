@@ -65,3 +65,24 @@ conversation's actual public messages; excludes internal instructions/reasoning.
   Kept the successful 18 October checks explicitly dated; did not claim a rerun.
 - Increased small link/choice/remove touch targets to 44 px in the source.
   Full SPA and real radio interactions still require the prepared browser checks.
+
+## 19 October · three local design alternatives
+
+- Human rejected the original as soulless/generic, approved three distinct short
+  demos, chose real photography plus illustration, and kept publication out of scope.
+- Design Explorer selected Frontend Design for independent art directions. AI
+  implemented photo-led storefront, illustrated coffee club and typographic roast
+  ticket, with the same offers and a comparison index. No winner selected.
+- Used installed packages without reinstalling. Preserved the author's untracked
+  lockfile and Next declaration. No API/database implementation changes or lead submissions.
+- Actual browser inspection caught tight Club lettering, 11 px storefront overflow,
+  and thumbnail cropping; these were corrected and final responsive checks passed.
+- Actual enquiry navigation exposed a lazy-loading fragment timing bug. Corrected
+  the initial scroll/focus and retested the real form destination.
+- Unbounded subsetting failed with the local fontTools variable-axis handling;
+  a static display weight fixed it. Renamed the modified IBM subset's internal
+  names to respect the reserved font name while preserving the license.
+- Frontend typecheck and production build passed. Twelve viewport checks and local
+  production refresh checks are saved. Original desktop viewport was pixel-identical.
+- Work retained on local branch `feat/6-design-demos`; no push, GitHub changes,
+  deployment or final homepage replacement. See docs/design-demos.md for limits.

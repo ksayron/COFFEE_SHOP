@@ -1,4 +1,11 @@
-# Selected treatment: workshop notice
+# Design status · local alternatives
+
+On 19 October the human rejected the previous treatment as too generic and
+approved three additional short concept pages. They are implemented locally at
+`/designs`; none has replaced `/`. See [design-demos.md](design-demos.md) for the
+comparison, asset sources and actual browser evidence. Selection is still open.
+
+## Previous baseline: workshop notice
 
 The human approved Florets + Jolene, with Zerno for atmosphere, before implementation.
 Design Taste Frontend is the primary workflow. Variation 6 / motion 2 / density 3.

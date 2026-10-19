@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-19",
+  "assets": [
+    {
+      "path": "apps/web/public/fonts/demos/ibm-plex-mono-OFL.txt",
+      "bytes": 4362,
+      "sha256": "d741e57d5f865e294df801f96b7b5161a88b211df65887e4358d271c9fc5fb4f"
+    },
+    {
+      "path": "apps/web/public/fonts/demos/kvarta-label.woff2",
+      "bytes": 24172,
+      "sha256": "17db6a2ea034149b8ebe18123fa0fbb78ed9cc1d7e7fbe6853517c4377ab608c"
+    },
+    {
+      "path": "apps/web/public/fonts/demos/unbounded-OFL.txt",
+      "bytes": 4391,
+      "sha256": "0ffe0a13450d66fcb678824aac041cdc41a3423f153b778feff2167624e67bb2"
+    },
+    {
+      "path": "apps/web/public/fonts/demos/unbounded.woff2",
+      "bytes": 42276,
+      "sha256": "5691c75c09c7de65f55f1e0d1e73fb90d338869da2eddb22416c3fa81d9c4f90"
+    },
+    {
+      "path": "apps/web/public/images/demos/preview-club.webp",
+      "bytes": 35886,
+      "sha256": "f9f9941472d477807b65bdf6701a4a295f08a0f9381aec6e9087108c46448fa8",
+      "width": 960,
+      "height": 600
+    },
+    {
+      "path": "apps/web/public/images/demos/preview-roast-ticket.webp",
+      "bytes": 19828,
+      "sha256": "b89b107b0e0a73edebb9e3f0d31fa348807c3406bb2c9f0ebbd84d3deb55ea4a",
+      "width": 960,
+      "height": 600
+    },
+    {
+      "path": "apps/web/public/images/demos/preview-storefront.webp",
+      "bytes": 32946,
+      "sha256": "d0dc00c23857acd450de9b435f9c8cecda7720697a77254048a588defdf0f590",
+      "width": 960,
+      "height": 600
+    },
+    {
+      "path": "apps/web/public/images/demos/storefront-1600.webp",
+      "bytes": 147824,
+      "sha256": "11bb779dd8a52a859c8c4ff45dc94266dd22d4f41f4fdd36221a547b459369d7",
+      "width": 1600,
+      "height": 2000
+    },
+    {
+      "path": "apps/web/public/images/demos/storefront-800.webp",
+      "bytes": 62298,
+      "sha256": "8eed80ef947ee4efdd80492e6f91c40b52c9d0cfb874a4cada0d53a44d0343bc",
+      "width": 800,
+      "height": 1000
+    },
+    {
+      "path": "evidence/design-demos/club-1440.png",
+      "bytes": 93613,
+      "sha256": "ef232735bab0a6bcbdf4e473e790c38d8dbc8f4aa8a16a0c07c3605939881ac5",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/club-390.png",
+      "bytes": 41985,
+      "sha256": "5d61f13266cea4f8329cac2d2a58e934df87c96077ca23837040f19a63b86b5f",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "evidence/design-demos/club-768.png",
+      "bytes": 79251,
+      "sha256": "900bd466ecf67247036360317e08490c9002afa310812f5694790a339b3694b4",
+      "width": 753,
+      "height": 980
+    },
+    {
+      "path": "evidence/design-demos/club-offers-1440.png",
+      "bytes": 80872,
+      "sha256": "52e53af50a1686c5d6fa0b7c0e807f49b6f6602bdc341514e597c5b39c79dc52",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/enquiry-target.png",
+      "bytes": 44506,
+      "sha256": "3d9325bfd2d21203d2f2950193064627dc32579f217b26d0aa70c8bb3d8426d7",
+      "width": 753,
+      "height": 980
+    },
+    {
+      "path": "evidence/design-demos/gallery-1440.png",
+      "bytes": 115701,
+      "sha256": "1c796603cadd4ec32f73bc0becb376f868c11f1789191157cd71609db739cee2",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/gallery-390.png",
+      "bytes": 41361,
+      "sha256": "a945cd84d6a6be30e6b5ece8fa1886eba77bfea35d665725c96f0b0c0746822e",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "evidence/design-demos/gallery-768.png",
+      "bytes": 94826,
+      "sha256": "775f721f403bf0db92136dd352849bc02e214239c597f1cf8bb1764ec5b211fe",
+      "width": 768,
+      "height": 1000
+    },
+    {
+      "path": "evidence/design-demos/original-after.png",
+      "bytes": 102452,
+      "sha256": "1ff54b4825b89fec7cb22c1b1d20210c44a85d2c409ab3df92068c3fce84e1b1",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/original-before.png",
+      "bytes": 102452,
+      "sha256": "1ff54b4825b89fec7cb22c1b1d20210c44a85d2c409ab3df92068c3fce84e1b1",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/roast-ticket-1440.png",
+      "bytes": 64201,
+      "sha256": "eda41c056bec1d26472376ef1eaa317e4d0821193d51f193b92bbad8141189d9",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/roast-ticket-390.png",
+      "bytes": 31081,
+      "sha256": "92e2598721ac5f8947fff4f634aac49a3997e81e1217e3ec4e39f4b7f11e5427",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "evidence/design-demos/roast-ticket-768.png",
+      "bytes": 64846,
+      "sha256": "7fed699a49ccabfd86b4dfd0558aab5e77c339fbc205f4098fa866fd6d406a4a",
+      "width": 753,
+      "height": 980
+    },
+    {
+      "path": "evidence/design-demos/roast-ticket-offers-768.png",
+      "bytes": 66220,
+      "sha256": "4138ec0567b8c45e09f8e8751bb8fc83423dc68d2f2fe37d41cdce1a79a9503d",
+      "width": 753,
+      "height": 980
+    },
+    {
+      "path": "evidence/design-demos/storefront-1440.png",
+      "bytes": 92611,
+      "sha256": "9cb1e79552b05439db45728170d772008e572dbe9dd1ab2fd314a24c5d5d75d5",
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "path": "evidence/design-demos/storefront-390.png",
+      "bytes": 38556,
+      "sha256": "7b3343da5fae11b6641112548728144d7b2d40f82618bd78ee86b98ff4f753ab",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "evidence/design-demos/storefront-768.png",
+      "bytes": 71005,
+      "sha256": "7809b86fc7ef18b98940d643317a65914d95f1826a21639dacd123d75562f9e1",
+      "width": 753,
+      "height": 980
+    },
+    {
+      "path": "evidence/design-demos/storefront-offers-390.png",
+      "bytes": 31459,
+      "sha256": "af61cd941f14710a3ef0d89cd5efade60263e694a6934d09697f3425034a1416",
+      "width": 375,
+      "height": 812
+    }
+  ]
+}

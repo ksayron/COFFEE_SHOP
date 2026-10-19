@@ -44,3 +44,11 @@ Prompt:
 - Product initial labels and weekly roast note: original HTML/CSS typography.
 
 Asset hashes and delivery sizes are recorded in the final verification evidence.
+
+## 19 October · additional local concepts
+
+The `/designs` alternatives use a licensed real Luigi Ritchie / Unsplash photograph,
+original SVG illustration, Unbounded and a renamed IBM Plex Mono subset. They do
+not reuse the generated workshop scenes above. Full source/license/derivative
+details are in [design-demos.md](design-demos.md#assets); hashes are recorded in
+`evidence/design-demos/assets.json`. The original homepage keeps its prior assets.

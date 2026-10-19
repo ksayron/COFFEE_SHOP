@@ -7,7 +7,8 @@
 - React/TypeScript/Vite + Radix Primitives; Nginx SPA and API proxy;
   Next.js Node Route Handlers + PostgreSQL through `pg`.
 - One Docker Compose locally. Public portfolio demo: Vercel SPA/API projects + Neon.
-- Approved design: neighbourhood workshop; Florets + Jolene; Zerno atmosphere only.
+- Baseline design: neighbourhood workshop. On 19 October the human approved three
+  additional local demos for comparison; no replacement selected. See docs/design-demos.md.
 - Deadline: 19 October 2026, 18:00 Minsk/Moscow.
 
 Use explicit `-R ksayron/COFFEE_SHOP` on every GitHub command supporting it.
@@ -53,6 +54,11 @@ incremental phase commits in one draft integration PR while runtime verification
 is unavailable. Do not merge/close those issues or claim a lockfile/build result.
 Automatic CI is temporarily manual-only until the human-generated lockfile is
 committed. Re-enable push/PR checks after the first successful install.
+
+19 October design iteration: local branch `feat/6-design-demos`, based on the
+existing implementation. Human explicitly requested local work only: do not push,
+publish or change GitHub state in this phase. Preserve the supplied untracked
+lockfile/Next declaration; frontend dependency installation is now available.
 
 Required checks: types/build; PostgreSQL integration for concurrent rolling-window
 deduplication; browser form states and attribution; 390/768/1440 screenshots;

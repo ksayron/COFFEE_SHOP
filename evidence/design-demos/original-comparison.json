@@ -1,0 +1,14 @@
+{
+  "dimensions": {
+    "format": "raw",
+    "width": 1425,
+    "height": 891,
+    "channels": 3,
+    "depth": "uchar",
+    "premultiplied": false,
+    "size": 3809025
+  },
+  "changedChannels": 0,
+  "totalChannels": 3809025,
+  "identical": true
+}
