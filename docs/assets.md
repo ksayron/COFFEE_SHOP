@@ -5,7 +5,7 @@ Zerno / Studio11 / Alexandra Ovseets photographs informed atmosphere only.
 The scenes below are generated illustrations of a fictional business, not evidence
 of real premises at Короля, 9. Anonymous hands are not identified as either founder.
 
-## Original generated photographs · 18 October 2026
+## Historical assets · generated photographs · 18 October 2026
 
 Created with the built-in OpenAI Imagegen tool in this Codex session. Original
 1536×1024 PNGs remain in the session's generated image directory. Committed assets
@@ -51,4 +51,17 @@ The `/designs` alternatives use a licensed real Luigi Ritchie / Unsplash photogr
 original SVG illustration, Unbounded and a renamed IBM Plex Mono subset. They do
 not reuse the generated workshop scenes above. Full source/license/derivative
 details are in [design-demos.md](design-demos.md#assets); hashes are recorded in
-`evidence/design-demos/assets.json`. The original homepage keeps its prior assets.
+`evidence/design-demos/assets.json`.
+
+## Selected full-site Club identity
+
+The full homepage now uses only the original cups/bag SVG in
+`apps/web/src/components/ClubHero.tsx`; no interior photograph is displayed.
+Self-hosted Golos and Unbounded with their existing OFL licenses are reused.
+The favicon and `images/social-club.svg` use outlined Unbounded glyphs and our
+original illustration; `social-club.png` is its 1200×630 raster derivative.
+Run `python scripts/prepare-club-brand.py`, then the installed sharp package to
+rasterise the SVG. Source font: existing `.local/demo-assets/unbounded.ttf`,
+prepared by the demo asset workflow. No external runtime asset requests.
+Old generated files remain for historical dev previews; the social metadata now
+points to the Club artwork. Messenger rendering is unverified until deployment.

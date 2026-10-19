@@ -1,53 +1,22 @@
-# Design status · local alternatives
+# Design decision · Printed coffee club
 
-On 19 October the human rejected the previous treatment as too generic and
-approved three additional short concept pages. They are implemented locally at
-`/designs`; none has replaced `/`. See [design-demos.md](design-demos.md) for the
-comparison, asset sources and actual browser evidence. Selection is still open.
+On 19 October 2026 the human selected **Printed coffee club for the whole site**
+after inspecting three local concepts. This supersedes the earlier neighbourhood
+workshop treatment. Design Explorer and Frontend Design guide implementation;
+there is no further visual selection pending.
 
-## Previous baseline: workshop notice
+The approved Club hero and original cups/bag SVG are shared between `/` and
+`/designs/club`. Cobalt #2244c8, butter #f4d977 and paper #fff5d2 continue through
+four product labels, the subscription poster, delivery/pickup and a cream form
+inside a blue section. Self-hosted Unbounded handles display lettering; Golos
+handles readable body text and controls. No generated interior photograph appears
+on the full page or its new social preview. No animation library was added.
 
-The human approved Florets + Jolene, with Zerno for atmosphere, before implementation.
-Design Taste Frontend is the primary workflow. Variation 6 / motion 2 / density 3.
-An intentionally light printed identity overrides automatic dark-mode/motion defaults.
+The supplied prices, founders, 5 kg batches and Thursday/Friday rhythm remain
+unchanged. Product actions select a one-time enquiry with the correct coffee;
+subscription and advice actions select their relevant interest. Form logic/API
+contract are unchanged; only its classes move into an isolated CSS Module.
 
-## Comparison actually inspected
-
-Both previews use the same headline, workshop image, Ethiopia sample and enquiry
-action. React server-rendered representative previews were inspected through the
-Codex browser at 390×844 and 1440×900 on 18 October 2026. This used an existing local
-React/TypeScript toolchain, not a completed install of this project's dependencies.
-They are static visual previews, not evidence that the SPA/API works.
-Captures were refreshed on 19 October. The responsive override is 390×844 or
-1440×900 CSS pixels; PNG capture dimensions differ in the in-app browser and
-are recorded in `evidence/assets.json`. Saved DOM measurements show loaded fonts
-and `scrollWidth <= innerWidth` for the selected representative preview.
-
-| Treatment | Composition | Observed result |
-| --- | --- | --- |
-| Notice (selected) | Headline before image on mobile; text left, photo right on desktop | Main action begins around y=490 on mobile, before the photo; readable promise first |
-| Photo | Image before headline on mobile; photo left, text right on desktop | Strong atmosphere, but main action starts around y=810, too late for ad visitors |
-
-- [Notice mobile](../evidence/previews/notice-390.png)
-- [Notice desktop](../evidence/previews/notice-1440.png)
-- [Photo mobile](../evidence/previews/photo-390.png)
-- [Photo desktop](../evidence/previews/photo-1440.png)
-
-The selected treatment extends into an ordinary product menu, a small tilted roast
-note, packaging photograph with subscription, delivery details and a plain form.
-Golos Text supports clear Russian UI; Literata gives headlines and wordmark a
-printed-shop character. Pale paper and celadon match the original fictional
-photographs. Forest green is the one action colour. No scroll effects or animation library.
-
-Long Russian headline is deliberately five lines on mobile, keeping the exact
-approved promise readable; the action still fits before the first photo. Small
-captions are secondary; price, product and CTA remain primary. Original photos
-and supplied Thursday/Friday rhythm carry identity instead of decorative cards.
-
-## Verification limits
-
-The preview server initially crashed on a missing file after sending headers.
-Reading the file before writing the response fixed it; subsequent captures worked.
-Full SPA rendering, real Radix keyboard behaviour, accessibility auditing and
-cross-browser/device testing remain pending dependency installation. See
-`docs/verification.md`; do not infer those checks from these screenshots.
+See [full-site verification](coffee-club-site.md), [concept comparison](design-demos.md)
+and [asset provenance](assets.md). Earlier preview screenshots remain historical
+artifacts, not screenshots of the current homepage. Local work only; no publishing.

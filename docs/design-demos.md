@@ -2,7 +2,8 @@
 
 The human requested a radical comparison after finding the original too generic.
 They chose short concept pages and real photography plus illustration. The
-approved implementation adds alternatives; it does not select a final direction.
+initial implementation added alternatives. The human subsequently selected **Printed
+coffee club for the whole site**; see [the full-site implementation](coffee-club-site.md).
 
 ## Open locally
 
@@ -12,7 +13,7 @@ Run `npm run dev:web` from the repository root. Existing development server:
 - [01 · Neighbourhood storefront](http://localhost:5173/designs/storefront)
 - [02 · Printed coffee club](http://localhost:5173/designs/club)
 - [03 · Roast ticket](http://localhost:5173/designs/roast-ticket)
-- [Original homepage](http://localhost:5173/)
+- [Current full homepage](http://localhost:5173/)
 
 These are ordinary SPA paths with native links and lazy page modules; no router
 package was added. Unknown `/designs/...` paths show the comparison with a clear
@@ -33,8 +34,9 @@ React, native CSS Modules and the existing Radix icons remain the foundation.
 
 Each uses the same factual promise, 5 kg batches, founders, Ethiopia 250 g / 32 BYN
 and subscription 2 × 250 g / 54 BYN with free delivery. All enquiry actions go to
-the original `/#application` form; no demo sends a lead or simulates success.
-No direction was promoted to the original homepage.
+the main `/#application` form; no demo sends a lead or simulates success.
+The initial comparison kept `/` unchanged. The subsequent approved Club expansion
+now lives at `/`; the checks below describe the earlier comparison phase.
 
 ## Assets
 
@@ -60,7 +62,7 @@ Reproduction uses `node scripts/prepare-demo-assets.mjs`, then
 No npm dependency install is part of these scripts. Assets are served locally;
 the demos do not load third-party font/image URLs at runtime.
 
-## Executed verification
+## Executed verification · initial comparison phase
 
 - Frontend `tsc --noEmit -p apps/web` and Vite production build passed with the
   author's existing installed dependencies. No dependency installation performed.

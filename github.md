@@ -7,8 +7,8 @@
 - React/TypeScript/Vite + Radix Primitives; Nginx SPA and API proxy;
   Next.js Node Route Handlers + PostgreSQL through `pg`.
 - One Docker Compose locally. Public portfolio demo: Vercel SPA/API projects + Neon.
-- Baseline design: neighbourhood workshop. On 19 October the human approved three
-  additional local demos for comparison; no replacement selected. See docs/design-demos.md.
+- Selected design: Printed coffee club, approved for the whole site on 19 October.
+  See docs/coffee-club-site.md; three comparison demos remain available.
 - Deadline: 19 October 2026, 18:00 Minsk/Moscow.
 
 Use explicit `-R ksayron/COFFEE_SHOP` on every GitHub command supporting it.
@@ -55,8 +55,8 @@ is unavailable. Do not merge/close those issues or claim a lockfile/build result
 Automatic CI is temporarily manual-only until the human-generated lockfile is
 committed. Re-enable push/PR checks after the first successful install.
 
-19 October design iteration: local branch `feat/6-design-demos`, based on the
-existing implementation. Human explicitly requested local work only: do not push,
+19 October design iterations: local demo branch `feat/6-design-demos`, followed
+by selected full-site branch `feat/7-coffee-club-site`, based on those local demos. Human explicitly requested local work only: do not push,
 publish or change GitHub state in this phase. Preserve the supplied untracked
 lockfile/Next declaration; frontend dependency installation is now available.
 

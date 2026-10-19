@@ -86,3 +86,26 @@ conversation's actual public messages; excludes internal instructions/reasoning.
   production refresh checks are saved. Original desktop viewport was pixel-identical.
 - Work retained on local branch `feat/6-design-demos`; no push, GitHub changes,
   deployment or final homepage replacement. See docs/design-demos.md for limits.
+
+
+## 19 October · selected Club identity across the full site
+
+- Human explicitly chose Printed coffee club for the whole site. AI reused the
+  approved hero/SVG and extended it through story, four products, subscription,
+  delivery/pickup, callback form and footer. Comparison demos remain available.
+- Extracted the shared hero and club fonts; moved form presentation into a CSS
+  Module without changing its submission/validation/state logic or backend.
+- Actual extra 320 px inspection caught the arched subscription caption clipping.
+  Narrower caption width fixed it; large quantity text wraps on the smallest width.
+- CSS formatting briefly left old class hashes in the Vite HMR DOM. Inspection
+  identified the mismatch; a fresh load restored the styles. The production bundle
+  was then inspected separately: 50 px inputs and borderless form fieldset confirmed.
+- Frontend typecheck/build passed using installed packages, without dependency
+  installation. 390/768/1440 plus 320 px measurements showed no horizontal overflow.
+- Product, subscription and question preselection, removal, invalid phone, keyboard
+  focus/Space activation and fragment refresh were exercised in the actual browser.
+- Real requests encountered the unavailable local API. The visible error and retry
+  retained entered fields; no fake successful submission or stored lead is claimed.
+- Created original outlined SVG favicon/social artwork, rasterised with installed
+  sharp, and updated theme metadata. No generated interiors on the current homepage.
+- Local branch feat/7-coffee-club-site. No deployment, push or GitHub state changes.

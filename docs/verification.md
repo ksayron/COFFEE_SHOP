@@ -1,3 +1,9 @@
+> 19 October, selected Club full-site update: frontend typecheck/build and actual
+> browser checks are now complete for this visual iteration. See
+> [coffee-club-site.md](coffee-club-site.md) for current evidence and limits.
+> Backend success, Compose persistence, public hosting and Lighthouse remain open.
+> The dated matrix below records earlier work, not a claim that all checks ran again.
+
 # Acceptance evidence
 
 No check is marked passed until executed. Use synthetic data; do not publish PII.

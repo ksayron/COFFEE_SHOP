@@ -39,6 +39,7 @@ for old, new in [('strokeWidth', 'stroke-width'), ('strokeLinecap', 'stroke-line
     illustration = illustration.replace(old, new)
 illustration = re.sub(r'<text.*?</text>', '', illustration, flags=re.S)
 illustration = illustration.replace('var(--butter)', '#f4d977').replace('currentColor', '#2244c8')
+illustration = '\n'.join(line.rstrip() for line in illustration.splitlines())
 illustration += lettering('к.', 423, 197, 38, '#f4d977')
 social = '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f4d977"/><rect x="24" y="24" width="1152" height="582" fill="none" stroke="#2244c8" stroke-width="3"/>'
 social += lettering('кварта', 58, 94, 46)
