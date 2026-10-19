@@ -1,18 +1,4 @@
 @font-face {
-  font-family: 'Golos Demo';
-  src: url('/fonts/golos.woff2') format('woff2');
-  font-weight: 400 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Unbounded Demo';
-  src: url('/fonts/demos/unbounded.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Kvarta Label Demo';
   src: url('/fonts/demos/kvarta-label.woff2') format('woff2');
   font-weight: 400;
