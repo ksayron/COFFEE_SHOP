@@ -10,10 +10,12 @@
     "test": "tsx --test packages/shared/*.test.ts",
     "test:integration": "tsx --test tests/integration.test.ts",
     "test:browser": "playwright test",
-    "migrate": "node apps/api/scripts/migrate.mjs"
+    "migrate": "node apps/api/scripts/migrate.mjs",
+    "check:source": "node scripts/check-source.cjs",
+    "test:sql": "node scripts/check-sql.cjs"
   },
   "devDependencies": {
     "@playwright/test": "1.58.2", "@types/node": "22.19.15", "tsx": "4.21.0",
-    "typescript": "5.9.3", "sharp": "0.34.5", "lighthouse": "13.0.3"
+    "typescript": "5.9.3", "sharp": "0.34.5"
   }
 }
