@@ -4,6 +4,10 @@ Source is prepared for local continuation. The human requested handling dependen
 downloads and postponing publication. No further installs, image pulls or public
 deployment were performed after that instruction.
 
+Source branch: `feat/2-foundation`, [draft PR #12](https://github.com/ksayron/COFFEE_SHOP/pull/12).
+Setup was merged in PR #11. The application draft is intentionally unmerged while
+runtime acceptance is pending; the default branch still contains delivery setup.
+
 Docker Desktop's Linux engine was unavailable at the 19 October final refresh.
 Earlier isolated SQL/Nginx results remain dated 18 October; they were not rerun.
 
