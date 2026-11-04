@@ -7,7 +7,8 @@
 - React/TypeScript/Vite + Radix Primitives; Nginx SPA and API proxy;
   Next.js Node Route Handlers + PostgreSQL through `pg`.
 - One Docker Compose locally. Public portfolio demo: Vercel SPA/API projects + Neon.
-- Approved design: neighbourhood workshop; Florets + Jolene; Zerno atmosphere only.
+- Selected design: Printed coffee club, approved for the whole site on 19 October.
+  See docs/coffee-club-site.md; three comparison demos remain available.
 - Deadline: 19 October 2026, 18:00 Minsk/Moscow.
 
 Use explicit `-R ksayron/COFFEE_SHOP` on every GitHub command supporting it.
@@ -46,6 +47,18 @@ Do not invent dependency numbers, test results, asset rights or completion evide
 6. Attach every created PR to the Codex chat; set issue `status:review`.
 7. Link acceptance evidence before merge/closure. Only then set `status:done`.
 8. Externally blocked acceptance stays open with an honest explanation.
+
+Current handoff exception: the human deferred public deployment and requested
+handling dependency downloads themselves. Keep the dependent implementation as
+incremental phase commits in one draft integration PR while runtime verification
+is unavailable. Do not merge/close those issues or claim a lockfile/build result.
+Automatic CI is temporarily manual-only until the human-generated lockfile is
+committed. Re-enable push/PR checks after the first successful install.
+
+19 October design iterations: local demo branch `feat/6-design-demos`, followed
+by selected full-site branch `feat/7-coffee-club-site`, based on those local demos. Human explicitly requested local work only: do not push,
+publish or change GitHub state in this phase. Preserve the supplied untracked
+lockfile/Next declaration; frontend dependency installation is now available.
 
 Required checks: types/build; PostgreSQL integration for concurrent rolling-window
 deduplication; browser form states and attribution; 390/768/1440 screenshots;

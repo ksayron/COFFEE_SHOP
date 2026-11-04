@@ -10,4 +10,9 @@ playwright-report/
 .local/
 .vercel/
 *.log
+*.tsbuildinfo
 .DS_Store
+.neon
+
+.vercel
+.env*

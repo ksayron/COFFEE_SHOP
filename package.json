@@ -1,0 +1,38 @@
+{
+  "name": "kvarta",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev:web": "npm run dev -w @kvarta/web",
+    "dev:api": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/run-api.mjs dev",
+    "start:api": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/run-api.mjs start",
+    "start:web": "npm run preview -w @kvarta/web -- --host 127.0.0.1 --port 4173 --strictPort",
+    "typecheck": "tsc --noEmit -p packages/shared && tsc --noEmit -p apps/web && tsc --noEmit -p apps/api",
+    "build": "npm run build -w @kvarta/web && npm run build -w @kvarta/api",
+    "test": "tsx --test packages/shared/*.test.ts",
+    "test:integration": "tsx --test tests/integration.test.ts",
+    "test:browser": "playwright test",
+    "migrate": "node --env-file-if-exists=.env --env-file-if-exists=.env.local apps/api/scripts/migrate.mjs",
+    "test:neon": "node --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/verify-neon.mjs",
+    "check:source": "node scripts/check-source.cjs",
+    "test:sql": "node scripts/check-sql.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@types/node": "22.19.15",
+    "sharp": "0.34.5",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@neon/config": "^1.9.2",
+    "@neon/env": "^1.6.3"
+  }
+}

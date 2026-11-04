@@ -1,0 +1,14 @@
+.git
+.local
+.neon
+.env
+.env.*
+!.env.example
+**/node_modules
+**/.next
+**/dist
+evidence
+test-results
+playwright-report
+**/*.tsbuildinfo
+*.log

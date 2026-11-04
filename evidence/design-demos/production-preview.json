@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "storefront",
+    "heading": "Ваш кофе.\nИз нашей мастерской.",
+    "clientWidth": 1265,
+    "fonts": "loaded",
+    "images": true,
+    "scrollWidth": 1265,
+    "width": 1280
+  },
+  {
+    "slug": "club",
+    "heading": "Утро лучше,\nкогда есть кофе.",
+    "clientWidth": 1265,
+    "fonts": "loaded",
+    "images": true,
+    "scrollWidth": 1265,
+    "width": 1280
+  },
+  {
+    "slug": "roast-ticket",
+    "heading": "ЧТ\nОбжариваем\n↗\nПТ\nПривозим по Минску",
+    "clientWidth": 1265,
+    "fonts": "loaded",
+    "images": true,
+    "scrollWidth": 1265,
+    "width": 1280
+  }
+]

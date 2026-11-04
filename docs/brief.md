@@ -2,6 +2,11 @@
 
 Human approved implementation on 18 October 2026. Deadline 19 October, 18:00 +03.
 
+19 October update: the human rejected the baseline visual treatment and approved
+three short local-only homepage demos. Facts/architecture remain the source of
+truth. The human then selected Printed coffee club for the whole site.
+See [full-site decision](coffee-club-site.md) and [comparison](design-demos.md).
+
 ## Source of truth
 
 Кварта, fictional Minsk workshop. Аня and Дмитрий, former baristas, roast since
@@ -42,10 +47,13 @@ Public approved exception: Vercel SPA/API + Neon; rewrites replace Nginx publicl
 Radix supplies behaviour, with custom styling. Shared validation, SQL migrations.
 Per-phone transaction advisory lock, then rolling 10-minute check and insert.
 Canonical +375 phone. 201 new, 200 duplicate, 400 invalid, 503 storage failure.
+During the ten-minute window the first payload wins; duplicates do not overwrite
+the original selection/comment or attribution.
 First UTMs/click IDs/landing/referrer persist per tab; submission URL captured separately.
 
-Design dials: variation 6, motion 2, density 3. Printed light workshop identity;
-no theme toggle required. Two previews compare composition before extension.
-Headline: «Обжариваем в четверг. В пятницу привозим по Минску.»
+Selected identity: butter/cobalt printed coffee club, Unbounded + Golos, original
+cup/bag SVG, normal scrolling. No theme toggle or animation library.
+Headline: «Утро лучше, когда есть кофе.» The original Thursday/Friday promise
+remains prominent in the hero. The other concepts remain local review pages.
 No fabricated founder portraits, reviews, business phone/email, admin or payments.
 Telegram deferred. Public demo is fictional, personal and noncommercial.

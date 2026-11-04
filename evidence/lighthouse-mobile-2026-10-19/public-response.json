@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-19T14:22:14.196Z",
+  "requestedUrl": "https://coffeeshop-sooty.vercel.app/",
+  "finalUrl": "https://coffeeshop-sooty.vercel.app/",
+  "status": 200,
+  "headers": {
+    "content-type": "text/html; charset=utf-8",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "etag": "W/\"bbabe4d5943297d883fa1da6c820830f\"",
+    "last-modified": "Mon, 19 Oct 2026 13:55:17 GMT",
+    "x-vercel-id": "fra1::9x7vm-1792419730936-a55f76fb25ff",
+    "x-vercel-cache": "HIT"
+  },
+  "assets": [
+    "/assets/index-DmmFahzA.js"
+  ]
+}

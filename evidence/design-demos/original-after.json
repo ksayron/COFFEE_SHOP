@@ -1,0 +1,16 @@
+{
+  "font": "Literata, Georgia, serif",
+  "height": 900,
+  "hero": {
+    "bottom": 598.171875,
+    "height": 361.5625,
+    "left": 72.5,
+    "right": 673.484375,
+    "top": 236.609375,
+    "width": 600.984375,
+    "x": 72.5,
+    "y": 236.609375
+  },
+  "scrollY": 0,
+  "width": 1440
+}

@@ -1,0 +1,105 @@
+{
+  "generated": "2026-10-19",
+  "assets": [
+    {
+      "path": "apps/web/public/images/social.jpg",
+      "bytes": 145795,
+      "sha256": "6eed7310f01fceed7fc43a8f9c8e3ed4e24fd7c0110d88b80ba91e84f69c26d7",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "apps/web/public/images/subscription-1200.webp",
+      "bytes": 86108,
+      "sha256": "9c08e58556a27fe793c0980ee11e32f6145591ec47b41958e8bedc308bf4c9ae",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "path": "apps/web/public/images/subscription-600.webp",
+      "bytes": 27710,
+      "sha256": "7104d8f3de4750120279d277742d9d8e39990922ced6735201f9dfbba017c07e",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "path": "apps/web/public/images/workshop-1280.webp",
+      "bytes": 117706,
+      "sha256": "5001a387a35de16ecdbd165e8489702f54be15166e942ad3be7ddf48362a2395",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "path": "apps/web/public/images/workshop-640.webp",
+      "bytes": 45152,
+      "sha256": "15931064be78643c0cf97161362c94f8d76a1bb2b6729d4c469bc5d1dd12ece6",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "path": "apps/web/public/fonts/golos-OFL.txt",
+      "bytes": 4394,
+      "sha256": "ff532f9e8789f09a9fdffc3c0954eedfb0a48be77b2e2eb90f5f82e4f347f50c"
+    },
+    {
+      "path": "apps/web/public/fonts/golos.woff2",
+      "bytes": 65036,
+      "sha256": "4c456d77fb76cbdb762036168ce45b3a53d29b4abbd95037e04ec1f1c9df8952"
+    },
+    {
+      "path": "apps/web/public/fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "apps/web/public/fonts/literata.woff2",
+      "bytes": 93912,
+      "sha256": "54fb13a1fa66936cbdc52fa0e6ef7c3926fca0e54179e8f1bb1c7eda74a2b5aa"
+    },
+    {
+      "path": "evidence/previews/notice-1440.png",
+      "bytes": 101095,
+      "sha256": "461db53bc4fff5cdecdc09834df9ed29eb51af8e942127ab5a54064815a2e893",
+      "width": 1403,
+      "height": 891
+    },
+    {
+      "path": "evidence/previews/notice-390.png",
+      "bytes": 41653,
+      "sha256": "3eb7c07ece252146f3964636be4d1f271a81b895bfb18b540889931401ef3f2c",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "evidence/previews/photo-1440.png",
+      "bytes": 98875,
+      "sha256": "781b9628fe58918dda8ce339900c9b3afedb33e8bd214752fe69c8866dffb05c",
+      "width": 1403,
+      "height": 891
+    },
+    {
+      "path": "evidence/previews/photo-390.png",
+      "bytes": 43130,
+      "sha256": "80caae862d6ec1628f3ef8161eb63e89e358f7ba481fbd5f18bfa1fb3f144ce0",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "path": "evidence/previews/selected-hero.png",
+      "bytes": 101095,
+      "sha256": "461db53bc4fff5cdecdc09834df9ed29eb51af8e942127ab5a54064815a2e893",
+      "width": 1403,
+      "height": 891
+    },
+    {
+      "path": "evidence/previews/viewport-1440.json",
+      "bytes": 113,
+      "sha256": "c18675f977cdfff197eea972941b91c290773fa7abb9c39224c8a8182990d517"
+    },
+    {
+      "path": "evidence/previews/viewport-390.json",
+      "bytes": 110,
+      "sha256": "61ae59209f2ef48bdd2a0896bcfb0467226f666004127766bd9cbf0af607a2c1"
+    }
+  ]
+}

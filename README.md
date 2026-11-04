@@ -1,12 +1,55 @@
 # Кварта
 
-Fictional Minsk roastery landing for a Junior+ job assignment. Implementation is
-in progress; no live deployment or completed checks are claimed yet.
+Лендинг вымышленной минской обжарки с ассортиментом, подпиской и заявкой без оплаты.
+React + TypeScript + Radix → Nginx → Next.js API → PostgreSQL, три сервиса Compose.
 
-Approved direction: neighbourhood workshop, Florets + Jolene. Zerno is an interior
-reference only. React SPA + Radix, Nginx, Next.js API and PostgreSQL;
-one local Compose. Approved public demo: Vercel + Neon.
+**Опубликованный сайт: [coffeeshop-sooty.vercel.app](https://coffeeshop-sooty.vercel.app).**
+[Настройки Vercel и повторный деплой](docs/vercel.md).
 
-See [workflow](github.md), [brief](docs/brief.md), [roadmap](docs/roadmap.md),
-[AI process](docs/ai-log.md), and [verification](docs/verification.md).
-This provisional README will be replaced with executed results and run instructions.
+**Выбран «Печатный кофейный клуб»: [весь сайт локально](http://localhost:5173/).**
+Жёлтая бумага, синий цвет, Unbounded, оригинальные чашки и этикетки. Предыдущие
+[три концепта](http://localhost:5173/designs) доступны для сравнения. Запуск интерфейса:
+`npm run dev:web`. [Решение и проверка](docs/coffee-club-site.md).
+
+## Запуск полного стека
+
+Node.js 22, npm 10+, Docker Desktop с Linux containers. Из корня в PowerShell:
+
+```powershell
+./scripts/start-local.ps1
+# После успешного запуска: http://localhost:8080
+npm run test:integration
+npm run test:browser
+./scripts/verify-persistence.ps1
+```
+
+Скрипт устанавливает зависимости, создаёт локальный `.env`, проверяет проект и
+запускает Compose. В этой дизайн-итерации использованы уже установленные пакеты,
+без скачиваний. Предоставленные автором lockfile и Next declaration не изменены
+и не включены в коммиты. [Запуск и SQL просмотра заявок](docs/deployment.md).
+
+## Решения и честные ограничения
+
+Человек предоставил факты, архитектуру, отклонил первый дизайн и выбрал клубный
+концепт. ИИ реализовал альтернативы, затем распространил выбранный стиль на весь
+лендинг и проверил его в браузере. История, все четыре товара, цены, подписка,
+доставка и самовывоз сохранены. Фото, портреты, отзывы и контакты не выдуманы:
+основная страница использует оригинальный SVG, адрес и форму. [Источники](docs/assets.md).
+
+PostgreSQL хранит заявки постоянно; транзакционная блокировка нормализованного
+телефона защищает от дублей между API-процессами в течение десяти минут. Атрибуция
+первого захода сохраняется в текущей вкладке. При сбое форма оставляет данные и
+предлагает повторить. Стоимость доставки ниже 50 BYN уточняет менеджер.
+
+Проверены frontend typecheck/build, размеры 320/390/768/1440 px, выбор товара,
+подписки и вопроса, ошибка телефона, клавиатурный фокус и настоящий сбой отправки
+при недоступном локальном API. Production bundle проверен локально с обновлением
+страницы и переходом к форме. ИИ заметил обрезанную подпись на 320 px и исправил
+её; ранее исправил задержку перехода к форме после lazy loading. [Журнал](docs/ai-log.md).
+
+Успешное сохранение через API в этой итерации не проверено: backend не запущен.
+Ранее отдельный SQL-тест на PostgreSQL 17 дал одну запись на 16 параллельных запросов;
+это не сквозная проверка. Compose persistence, public URL и мобильный Lighthouse
+остаются открытыми. Размещение отложено человеком; Telegram не реализован.
+
+[Фазы](docs/roadmap.md) · [GitHub-процесс](github.md) · [Передача](docs/handoff.md)

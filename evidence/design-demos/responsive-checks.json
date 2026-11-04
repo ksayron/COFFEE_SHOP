@@ -1,0 +1,494 @@
+[
+  {
+    "label": "club-390",
+    "clientWidth": 375,
+    "fonts": "loaded",
+    "h1": "Утро лучше,когда есть кофе.",
+    "headings": [
+      "Эфиопия Иргачеффе",
+      "Наша ежемесячнаявстреча."
+    ],
+    "height": 844,
+    "images": [],
+    "links": [
+      {
+        "height": 46,
+        "href": "/#application",
+        "text": "Оставить заявку"
+      },
+      {
+        "height": 48,
+        "href": "/#application",
+        "text": "Попробуем?"
+      },
+      {
+        "height": 58,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "label": "club-768",
+    "clientWidth": 753,
+    "fonts": "loaded",
+    "h1": "Утро лучше,когда есть кофе.",
+    "headings": [
+      "Эфиопия Иргачеффе",
+      "Наша ежемесячнаявстреча."
+    ],
+    "height": 1000,
+    "images": [],
+    "links": [
+      {
+        "height": 51,
+        "href": "/#application",
+        "text": "Оставить заявку"
+      },
+      {
+        "height": 48,
+        "href": "/#application",
+        "text": "Попробуем?"
+      },
+      {
+        "height": 58,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "label": "club-1440",
+    "clientWidth": 1425,
+    "fonts": "loaded",
+    "h1": "Утро лучше,когда есть кофе.",
+    "headings": [
+      "Эфиопия Иргачеффе",
+      "Наша ежемесячнаявстреча."
+    ],
+    "height": 900,
+    "images": [],
+    "links": [
+      {
+        "height": 51,
+        "href": "/#application",
+        "text": "Оставить заявку"
+      },
+      {
+        "height": 48,
+        "href": "/#application",
+        "text": "Попробуем?"
+      },
+      {
+        "height": 58,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "label": "storefront-1440-final",
+    "clientWidth": 1425,
+    "fonts": "loaded",
+    "h1": "Ваш кофе.Из нашей мастерской.",
+    "headings": [
+      "Эфиопия Иргачеффе",
+      "Кофе дома.Всегда."
+    ],
+    "height": 900,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/images/demos/storefront-1600.webp"
+      }
+    ],
+    "links": [
+      {
+        "height": 51,
+        "href": "/#application",
+        "text": "Оставить заявку"
+      },
+      {
+        "height": 44,
+        "href": "/#application",
+        "text": "Хочу попробовать"
+      },
+      {
+        "height": 57,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "label": "storefront-390-final",
+    "clientWidth": 375,
+    "fonts": "loaded",
+    "h1": "Ваш кофе.Из нашей мастерской.",
+    "headings": [
+      "Эфиопия Иргачеффе",
+      "Кофе дома.Всегда."
+    ],
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/images/demos/storefront-1600.webp"
+      }
+    ],
+    "links": [
+      {
+        "height": 48,
+        "href": "/#application",
+        "text": "Оставить заявку"
+      },
+      {
+        "height": 44,
+        "href": "/#application",
+        "text": "Хочу попробовать"
+      },
+      {
+        "height": 57,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "label": "storefront-768",
+    "clientWidth": 753,
+    "fonts": "loaded",
+    "h1": "Ваш кофе.Из нашей мастерской.",
+    "headings": [
+      "Эфиопия Иргачеффе",
+      "Кофе дома.Всегда."
+    ],
+    "height": 1000,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/images/demos/storefront-1600.webp"
+      }
+    ],
+    "links": [
+      {
+        "height": 51,
+        "href": "/#application",
+        "text": "Оставить заявку"
+      },
+      {
+        "height": 44,
+        "href": "/#application",
+        "text": "Хочу попробовать"
+      },
+      {
+        "height": 57,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "label": "roast-ticket-1440",
+    "clientWidth": 1425,
+    "fonts": "loaded",
+    "h1": "ЧТОбжариваем↗ПТПривозим по Минску",
+    "headings": [
+      "ЭФИОПИЯИРГАЧЕФФЕ",
+      "Кофе по расписанию.Без лишних забот."
+    ],
+    "height": 900,
+    "images": [],
+    "links": [
+      {
+        "height": 57,
+        "href": "/#application",
+        "text": "Свежий кофе. На этой неделе."
+      },
+      {
+        "height": 44,
+        "href": "/#application",
+        "text": "Попробовать"
+      },
+      {
+        "height": 69,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "label": "roast-ticket-390",
+    "clientWidth": 375,
+    "fonts": "loaded",
+    "h1": "ЧТОбжариваем↗ПТПривозим по Минску",
+    "headings": [
+      "ЭФИОПИЯИРГАЧЕФФЕ",
+      "Кофе по расписанию.Без лишних забот."
+    ],
+    "height": 844,
+    "images": [],
+    "links": [
+      {
+        "height": 52,
+        "href": "/#application",
+        "text": "Свежий кофе. На этой неделе."
+      },
+      {
+        "height": 44,
+        "href": "/#application",
+        "text": "Попробовать"
+      },
+      {
+        "height": 69,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "label": "roast-ticket-768",
+    "clientWidth": 753,
+    "fonts": "loaded",
+    "h1": "ЧТОбжариваем↗ПТПривозим по Минску",
+    "headings": [
+      "ЭФИОПИЯИРГАЧЕФФЕ",
+      "Кофе по расписанию.Без лишних забот."
+    ],
+    "height": 1000,
+    "images": [],
+    "links": [
+      {
+        "height": 57,
+        "href": "/#application",
+        "text": "Свежий кофе. На этой неделе."
+      },
+      {
+        "height": 44,
+        "href": "/#application",
+        "text": "Попробовать"
+      },
+      {
+        "height": 69,
+        "href": "/#application",
+        "text": "54 BYN / мес"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "label": "gallery-1440-final",
+    "clientWidth": 1425,
+    "fonts": "loaded",
+    "h1": "Три характера.Одна мастерская.",
+    "headings": [
+      "Соседская обжарка ",
+      "Кофейный клуб ",
+      "Лист обжарки ",
+      "Это примерка, а не финал."
+    ],
+    "height": 900,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-storefront.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-club.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-roast-ticket.webp"
+      }
+    ],
+    "links": [
+      {
+        "height": 264,
+        "href": "/designs/storefront",
+        "text": "01"
+      },
+      {
+        "height": 44,
+        "href": "/designs/storefront",
+        "text": "Соседская обжарка"
+      },
+      {
+        "height": 264,
+        "href": "/designs/club",
+        "text": "02"
+      },
+      {
+        "height": 44,
+        "href": "/designs/club",
+        "text": "Кофейный клуб"
+      },
+      {
+        "height": 264,
+        "href": "/designs/roast-ticket",
+        "text": "03"
+      },
+      {
+        "height": 44,
+        "href": "/designs/roast-ticket",
+        "text": "Лист обжарки"
+      },
+      {
+        "height": 44,
+        "href": "/",
+        "text": "Открыть текущий сайт"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "label": "gallery-390",
+    "clientWidth": 375,
+    "fonts": "loaded",
+    "h1": "Три характера.Одна мастерская.",
+    "headings": [
+      "Соседская обжарка ",
+      "Кофейный клуб ",
+      "Лист обжарки ",
+      "Это примерка, а не финал."
+    ],
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-storefront.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-club.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-roast-ticket.webp"
+      }
+    ],
+    "links": [
+      {
+        "height": 209,
+        "href": "/designs/storefront",
+        "text": "01"
+      },
+      {
+        "height": 44,
+        "href": "/designs/storefront",
+        "text": "Соседская обжарка"
+      },
+      {
+        "height": 209,
+        "href": "/designs/club",
+        "text": "02"
+      },
+      {
+        "height": 44,
+        "href": "/designs/club",
+        "text": "Кофейный клуб"
+      },
+      {
+        "height": 209,
+        "href": "/designs/roast-ticket",
+        "text": "03"
+      },
+      {
+        "height": 44,
+        "href": "/designs/roast-ticket",
+        "text": "Лист обжарки"
+      },
+      {
+        "height": 44,
+        "href": "/",
+        "text": "Открыть текущий сайт"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "label": "gallery-768",
+    "clientWidth": 768,
+    "fonts": "loaded",
+    "h1": "Три характера.Одна мастерская.",
+    "headings": [
+      "Соседская обжарка ",
+      "Кофейный клуб ",
+      "Лист обжарки ",
+      "Это примерка, а не финал."
+    ],
+    "height": 1000,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-storefront.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-club.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/images/demos/preview-roast-ticket.webp"
+      }
+    ],
+    "links": [
+      {
+        "height": 142,
+        "href": "/designs/storefront",
+        "text": "01"
+      },
+      {
+        "height": 44,
+        "href": "/designs/storefront",
+        "text": "Соседская обжарка"
+      },
+      {
+        "height": 142,
+        "href": "/designs/club",
+        "text": "02"
+      },
+      {
+        "height": 44,
+        "href": "/designs/club",
+        "text": "Кофейный клуб"
+      },
+      {
+        "height": 142,
+        "href": "/designs/roast-ticket",
+        "text": "03"
+      },
+      {
+        "height": 44,
+        "href": "/designs/roast-ticket",
+        "text": "Лист обжарки"
+      },
+      {
+        "height": 44,
+        "href": "/",
+        "text": "Открыть текущий сайт"
+      }
+    ],
+    "scrollWidth": 768,
+    "width": 768
+  }
+]
