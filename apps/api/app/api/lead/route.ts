@@ -58,8 +58,10 @@ export async function POST(request: Request) {
     const result = await saveLead(parsed.data);
     return json({ accepted: true, duplicate: result.duplicate }, result.duplicate ? 200 : 201);
   }
-  catch {
-    console.error(JSON.stringify({ event: 'lead_storage_unavailable' }));
+  catch (error) {
+    // Log a stable database error code without SQL, credentials or contact data.
+    const code = error && typeof error === 'object' && 'code' in error ? String(error.code) : 'connection_error';
+    console.error(JSON.stringify({ event: 'lead_storage_unavailable', code }));
     return json({ message: 'Не удалось сохранить заявку. Данные остались в форме. Попробуйте ещё раз через минуту.' }, 503);
   }
 }

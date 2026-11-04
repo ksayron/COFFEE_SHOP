@@ -1,9 +1,9 @@
 import type { Lead } from '@kvarta/shared';
-import { pool } from './db';
+import { database } from './db';
 export async function saveLead(lead: Lead): Promise<{
   duplicate: boolean;
 }> {
-  const client = await pool.connect();
+  const client = await database().connect();
   try {
     await client.query('BEGIN');
     // A transaction-scoped lock serialises all instances for this phone only.

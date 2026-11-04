@@ -1,4 +1,4 @@
-import { parsePhoneNumberFromString } from 'libphonenumber-js/max';
+import { AsYouType, parsePhoneNumberFromString } from 'libphonenumber-js/max';
 import { z } from 'zod';
 export const products = [
   { id: 'ethiopia', name: 'Эфиопия Иргачеффе', notes: 'Цветы, бергамот', detail: 'Светлая обжарка', weight: '250 г', price: 32 },
@@ -6,6 +6,29 @@ export const products = [
   { id: 'brazil', name: 'Бразилия Серрадо', notes: 'Орех, шоколад', detail: 'Под эспрессо', weight: '250 г', price: 26 },
   { id: 'drips', name: 'Дрип-пакеты, ассорти', notes: 'Любимый кофе, где угодно', detail: 'Нужны только чашка и вода', weight: '10 штук', price: 18 },
 ] as const;
+export const PHONE_INPUT_MAX_LENGTH = 17;
+export function formatPhoneInput(raw: string): string {
+  const hasPlus = raw.trimStart().startsWith('+');
+  let digits = raw.replace(/\D/g, '');
+  if (!digits) return hasPlus ? '+' : '';
+  // Keep explicit foreign numbers recognizable so validation can reject them.
+  if (hasPlus && !digits.startsWith('375')) {
+    return new AsYouType().input('+' + digits.slice(0, 12)).slice(0, PHONE_INPUT_MAX_LENGTH);
+  }
+  let international = hasPlus || digits.startsWith('375');
+  if (!international && digits.startsWith('80') && digits.length > 2) {
+    digits = digits.slice(2);
+    international = true;
+  } else if (!international && digits.startsWith('0') && digits.length > 1) {
+    digits = digits.slice(1);
+    international = true;
+  } else if (international) {
+    digits = digits.slice(3);
+  }
+  const national = digits.slice(0, 9);
+  const grouped = [national.slice(0, 2), national.slice(2, 5), national.slice(5, 7), national.slice(7, 9)].filter(Boolean).join(' ');
+  return international ? '+375' + (grouped ? ' ' + grouped : '') : grouped;
+}
 export function normalizePhone(raw: string): string | null {
   if (!/^\+?[\d\s().-]+$/.test(raw.trim()) || raw.length > 40)
     return null;

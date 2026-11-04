@@ -1,6 +1,11 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "cd ../.. && npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    {"source":"/api/:path*","destination":"https://REPLACE-WITH-KVARTA-API.vercel.app/api/:path*"},
+    {"source":"/api/:path*","destination":"https://coffee-shop-api-olive.vercel.app/api/:path*"},
     {"source":"/(.*)","destination":"/index.html"}
   ]
 }

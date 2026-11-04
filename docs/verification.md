@@ -1,3 +1,8 @@
+> 19 October Neon update: the production build, local production API, real browser
+> form submissions, Neon persistence/attribution, retries, and concurrency now pass.
+> See [Neon verification](../evidence/neon-verification.md). Compose and public
+> hosting checks remain separate and unrun in this setup.
+>
 > 19 October, selected Club full-site update: frontend typecheck/build and actual
 > browser checks are now complete for this visual iteration. See
 > [coffee-club-site.md](coffee-club-site.md) for current evidence and limits.

@@ -55,6 +55,6 @@ export function App() {
         <div className={s.formPaper}><LeadForm selection={selection} /></div>
       </section>
     </main>
-    <footer className={s.footer}><a className={club.brand} href="#">кварта<span>кофе для своих</span></a><p>Минск, Короля, 9<br />С 2019 года. По 5 кг за раз.</p><p className={s.demoNote}>Учебный проект. Мастерская вымышлена.<br />Заявки сохраняются для демонстрации формы.</p></footer>
+    <footer className={s.footer}><a className={club.brand} href="#">кварта<span>кофе для своих</span></a><p>Минск, Короля, 9<br />С 2019 года. По 5 кг за раз.</p></footer>
   </div>;
 }

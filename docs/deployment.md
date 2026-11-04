@@ -1,11 +1,17 @@
 # Running and deployment
 
+> 19 October 2026: Neon Postgres is now linked to project
+> `curly-dust-15361413`, branch `production`. The migration, production build,
+> and local browser → Next.js → Neon verification passed. Use [neon.md](neon.md)
+> for the current Neon startup commands and [verification evidence](../evidence/neon-verification.md)
+> for executed results. The public [frontend](https://coffeeshop-sooty.vercel.app)
+> and [API health](https://coffee-shop-api-olive.vercel.app/api/health) are now
+> deployed on Vercel. See [Vercel setup](vercel.md).
+
 ## Local Compose
 
-Dependency installation was handed to the human on 18 October. The interrupted
-download did not produce a lockfile. First run `npm install` at the repository
-root, then commit `package-lock.json`; Docker builds and CI intentionally use
-`npm ci` and require that real generated lockfile. No substitute lock was invented.
+The repository now has a real generated lockfile validated by Vercel's Linux
+`npm ci`. Run `npm ci` from the root and commit `package-lock.json` with the app.
 On Windows, `./scripts/start-local.ps1` performs this install, creates a random
 local `.env` if absent, runs checks/builds and starts Compose. It has not been run.
 
@@ -22,20 +28,18 @@ then `npm run test:browser`. Submit a synthetic application and run
 Integration tests stop/start the local database and delete their own synthetic
 fixtures; run them only against this local disposable demonstration environment.
 
-## Public deployment (deferred by human on 18 October 2026)
+## Public deployment (19 October 2026)
 
-Public publication and public Lighthouse have not been performed. Create a Neon
-database and use the pooled TLS connection string as secret `DATABASE_URL` for
-the API Vercel project (root `apps/api`, framework Next.js). Run migrations once
-with that secret in the environment: `npm run migrate` from the repo root.
-Set `ALLOWED_ORIGINS` to the public frontend origin (no trailing slash).
+Vercel team `ksayronin-soft` hosts `coffee_shop` (Vite, root `apps/web`) and
+`coffee-shop-api` (Next.js, root `apps/api`). Production Postgres is the existing
+Neon project `curly-dust-15361413`, branch `production`. Its pooled connection
+string is a production secret on the API project; no DB credentials are sent
+to the frontend. `ALLOWED_ORIGINS` includes the public frontend aliases.
 
-Create a second Vercel project rooted at `apps/web` (Vite). Install from workspace
-lockfile; build `npm run build -w @kvarta/web` from repo root. Replace the API
-destination in `apps/web/vercel.json` with the actual API origin. Keep the `/api`
-rewrite before SPA fallback. Set an absolute HTTPS `og:image` and canonical URL
-in `apps/web/index.html` once the final frontend origin exists. Test a real public
-submission and its database record before marking deployment complete.
+Both projects install from the workspace lockfile and build from their app root.
+The frontend's `/api` rewrite targets `coffee-shop-api-olive.vercel.app`; canonical
+and social image URLs use `coffeeshop-sooty.vercel.app`. Deployment instructions
+and validation are in [vercel.md](vercel.md). Public Lighthouse has not been run.
 
 Vercel replaces Nginx publicly. Compose remains the complete self-contained local
 package. Demo is fictional and noncommercial within Hobby personal-use scope.

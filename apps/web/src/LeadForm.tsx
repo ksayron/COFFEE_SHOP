@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import * as RadioGroup from '@radix-ui/react-radio-group';
 import { ArrowRightIcon, CheckIcon, ReloadIcon, Cross2Icon } from '@radix-ui/react-icons';
-import { leadSchema, normalizePhone, products, type Interest, type ProductId } from '@kvarta/shared';
+import { leadSchema, normalizePhone, formatPhoneInput, PHONE_INPUT_MAX_LENGTH, products, type Interest, type ProductId } from '@kvarta/shared';
 import { attribution } from './attribution';
 import s from './LeadForm.module.css';
 export type Selection = {
@@ -43,6 +43,27 @@ export function LeadForm({ selection }: {
       successRef.current?.focus();
   }, [status]);
   const clearError = (field: string) => setErrors(previous => { const next = { ...previous }; delete next[field]; return next; });
+  function updatePhone(raw: string, input: HTMLInputElement, caret: number, inputType = '') {
+    // Deleting a generated space should also remove the adjacent digit, so
+    // Backspace/Delete never get stuck at a formatting boundary.
+    if (inputType.startsWith('delete') && raw !== phone && raw.replace(/\D/g, '').length === phone.replace(/\D/g, '').length) {
+      const backward = inputType === 'deleteContentBackward';
+      for (let index = backward ? caret - 1 : caret; index >= 0 && index < raw.length; index += backward ? -1 : 1) {
+        if (/\d/.test(raw[index])) {
+          raw = raw.slice(0, index) + raw.slice(index + 1);
+          if (backward) caret--;
+          break;
+        }
+      }
+    }
+    const formatted = formatPhoneInput(raw);
+    const position = Math.min(formatPhoneInput(raw.slice(0, caret)).length, formatted.length);
+    setPhone(formatted);
+    clearError('phone');
+    requestAnimationFrame(() => {
+      if (document.activeElement === input && !input.disabled) input.setSelectionRange(position, position);
+    });
+  }
   function focusError(fields: Record<string, string>) {
     requestAnimationFrame(() => formRef.current?.querySelector<HTMLElement>(`[name="${Object.keys(fields)[0]}"]`)?.focus());
   }
@@ -129,11 +150,25 @@ export function LeadForm({ selection }: {
       </div>
       <div className={s.field}>
         <label htmlFor="phone">Телефон <span>обязательно</span></label>
-        <input id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="+375 29 123-45-67" maxLength={40} value={phone} onChange={event => { setPhone(event.target.value); clearError('phone'); }} onBlur={() => {
-          if (phone && !normalizePhone(phone))
-            setErrors(previous => ({ ...previous, phone: 'Нужен белорусский номер: +375 29 123-45-67' }));
+        <input id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="+375 29 123 45 67" maxLength={PHONE_INPUT_MAX_LENGTH} value={phone} onChange={event => {
+          const input = event.currentTarget;
+          updatePhone(input.value, input, input.selectionStart ?? input.value.length, (event.nativeEvent as InputEvent).inputType);
+        }} onPaste={event => {
+          // Format the full clipboard value before the native length limit can
+          // truncate a longer domestic notation such as 8 (029) 123-45-67.
+          event.preventDefault();
+          const input = event.currentTarget;
+          const start = input.selectionStart ?? 0;
+          const end = input.selectionEnd ?? start;
+          const pasted = event.clipboardData.getData('text');
+          updatePhone(input.value.slice(0, start) + pasted + input.value.slice(end), input, start + pasted.length);
+        }} onBlur={() => {
+          const normalized = normalizePhone(phone);
+          if (normalized) setPhone(formatPhoneInput(normalized));
+          else if (phone)
+            setErrors(previous => ({ ...previous, phone: 'Нужен белорусский номер: +375 29 123 45 67' }));
         }} disabled={status === 'pending'} required aria-invalid={!!errors.phone} aria-describedby={`phone-hint${errors.phone ? ' phone-error' : ''}`} />
-        <p id="phone-hint" className={s.fieldHint}>Белорусский номер с кодом +375</p>
+        <p id="phone-hint" className={s.fieldHint}>Формат: +375 29 123 45 67</p>
         {errors.phone && <p id="phone-error" className={s.fieldError}>
           {errors.phone}
         </p>}

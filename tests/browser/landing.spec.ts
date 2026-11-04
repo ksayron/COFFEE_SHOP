@@ -74,7 +74,7 @@ test('storage failure is recoverable and reduced-motion/keyboard work', async ({
   await page.route('**/api/lead', route => route.fulfill({ status: 503, contentType: 'application/json', body: JSON.stringify({ message: 'Не удалось сохранить заявку. Попробуйте ещё раз через минуту.' }) }), { times: 1 });
   await page.getByRole('button', { name: 'Оставить заявку', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('через минуту');
-  await expect(page.getByLabel('Телефон', { exact: false })).toHaveValue('+375291111212');
+  await expect(page.getByLabel('Телефон', { exact: false })).toHaveValue('+375 29 111 12 12');
   await page.getByRole('button', { name: 'Попробовать ещё раз' }).click();
   await expect(page.getByRole('heading', { name: 'Спасибо, заявка у нас.' })).toBeVisible();
 });

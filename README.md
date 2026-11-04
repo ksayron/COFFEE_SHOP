@@ -3,6 +3,9 @@
 Лендинг вымышленной минской обжарки с ассортиментом, подпиской и заявкой без оплаты.
 React + TypeScript + Radix → Nginx → Next.js API → PostgreSQL, три сервиса Compose.
 
+**Опубликованный сайт: [coffeeshop-sooty.vercel.app](https://coffeeshop-sooty.vercel.app).**
+[Настройки Vercel и повторный деплой](docs/vercel.md).
+
 **Выбран «Печатный кофейный клуб»: [весь сайт локально](http://localhost:5173/).**
 Жёлтая бумага, синий цвет, Unbounded, оригинальные чашки и этикетки. Предыдущие
 [три концепта](http://localhost:5173/designs) доступны для сравнения. Запуск интерфейса:

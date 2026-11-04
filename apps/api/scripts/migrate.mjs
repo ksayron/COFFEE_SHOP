@@ -1,6 +1,7 @@
-import pg from 'pg';
+import { createClient } from './postgres.mjs';
 import { readdir, readFile } from 'node:fs/promises';
-const client = new pg.Client({connectionString:process.env.DATABASE_URL,connectionTimeoutMillis:10000});
+if (!process.env.DATABASE_URL && !process.env.DATABASE_URL_UNPOOLED) throw new Error('DATABASE_URL is required for migrations');
+const client = createClient({connectionString:process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL,connectionTimeoutMillis:15000});
 await client.connect();
 try {
   await client.query('BEGIN');
@@ -16,6 +17,7 @@ try {
     }
   }
   await client.query('COMMIT');
+  console.log('Database migrations up to date.');
 } catch(error) {
   await client.query('ROLLBACK').catch(()=>{});
   console.error('Migration failed; database unchanged.'); process.exitCode=1;
